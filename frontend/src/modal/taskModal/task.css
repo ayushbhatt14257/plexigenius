@@ -1,0 +1,88 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .modal-content input[type="date"] {
+    cursor: pointer;
+  }
+  
+  .modal-content select {
+    background-color: #f9f9f9;
+  }
+  
+  .modal-content textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  /* Buttons */
+  .modal-content button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal-content button:nth-child(2) {
+    background-color: #dc3545;
+  }
+  
+  .modal-content button:nth-child(2):hover {
+    background-color: #c82333;
+  }
+  
+  /* Styling for the Cancel Button */
+  .modal-content button:nth-child(2) {
+    margin-top: 10px;
+    width: 100%;
+  }
+  

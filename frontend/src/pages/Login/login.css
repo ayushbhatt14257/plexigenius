@@ -1,0 +1,81 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.loginHeading h1{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mainLoginFormContainer {
+  background-color: var(--color-bg2);
+  margin-top: 2rem;
+  padding: 10px 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.adminLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminLogin h3 {
+
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+.loginFormContainer {
+  width: 100%;
+}
+
+.loginFormInput {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.loginFormInput input {
+  padding: 12px 10px;
+  border-radius: 5px;
+  background-color: var(--color-bg);
+  color: var(--color-light);
+}
+
+.loginFormBtn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.loginFormBtn button {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+  .loginHeading h1{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .mainLoginFormContainer {
+    width: 100%;
+    margin-top: 4rem;
+  }
+}

@@ -1,0 +1,86 @@
+.dashboard-container {
+    padding: 2rem;
+    font-family: sans-serif;
+    color: #333;
+}
+  
+.dashboard-container h1 {
+    color: white;
+}
+  .dashboard-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-box {
+    background-color: #ffffff;
+    color: #333;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+  }
+  
+  .create-button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .create-button:hover {
+    background-color: #218838;
+  }
+  
+  .employee-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .employee-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .employee-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .task-dropdown {
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .task-item {
+    background-color: #f1faff;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
