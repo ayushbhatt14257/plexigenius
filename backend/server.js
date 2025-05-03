@@ -9,11 +9,14 @@ const path = require("path")
 
 require('./db/conn');
 
-app.use(cors({
-    origin: "https://plexigenius.onrender.com",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+if (process.env.NODE_ENV !== 'production') {
+    app.use(cors({
+      origin: "http://localhost:3000",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true
+    }));
+  }
 
 const adminroute = require('./routes/adminRoutes')
 const employeeroute = require('./routes/employessRoute')
