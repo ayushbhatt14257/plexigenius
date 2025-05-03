@@ -7,16 +7,21 @@ const cors = require('cors')
 const path = require("path")
 
 
+const allowedOrigins = [
+  "http://localhost:3000", // React dev frontend
+  "https://plexigenius.onrender.com" // deployed frontend
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
+
+
 require('./db/conn');
 
-if (process.env.NODE_ENV !== 'production') {
-    app.use(cors({
-      origin: "http://localhost:5000", 
-      methods: ["GET", "POST", "PUT", "DELETE"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true
-    }));
-}
   
 
 const adminroute = require('./routes/adminRoutes')
