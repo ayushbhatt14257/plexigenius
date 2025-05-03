@@ -3,7 +3,6 @@ const router = express.Router();
 const Admin = require('../model/adminSchema');
 const bcrypt = require('bcryptjs');
 const generateToken = require('../utils/generateToken');
-const protect = require("../middleware/authMiddleware")
 
 
 // registartion api
@@ -73,6 +72,8 @@ router.post("/login", async(req, res) => {
 });
 
 
+// const adminroute = router;
+
 
 
 // auth test 
@@ -80,4 +81,4 @@ router.post("/login", async(req, res) => {
 //     res.json({message: "Welcome", admin: req.admin});
 // })
 
-module.exports = router;
+module.exports = router

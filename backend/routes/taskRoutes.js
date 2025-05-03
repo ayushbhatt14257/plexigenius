@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const protect = require("../middleware/authMiddleware")
+const {protect} = require("../middleware/authMiddleware")
 const Task = require('../model/taskSchema');
 const Employee = require('../model/employess');
 
