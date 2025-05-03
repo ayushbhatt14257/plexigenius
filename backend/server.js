@@ -6,18 +6,7 @@ const cors = require('cors')
 
 const path = require("path")
 
-
-const allowedOrigins = [
-  "http://localhost:3000", // React dev frontend
-  "https://plexigenius.onrender.com" // deployed frontend
-];
-
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+app.use(cors());
 
 
 require('./db/conn');
