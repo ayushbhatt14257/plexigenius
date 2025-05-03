@@ -29,10 +29,10 @@ const TaskDash = () => {
     const fetchData = async () => {
       try {
         const [tasksRes, employeesRes] = await Promise.all([
-          fetch("http://localhost:5000/getTask", {
+          fetch("/getTask", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          fetch("http://localhost:5000/getEmployee", {
+          fetch("/getEmployee", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -53,7 +53,7 @@ const TaskDash = () => {
   const handleDeleteTask = async (taskId) => {
     if (window.confirm("Are you sure to delete this task?")) {
       try {
-        const res = await fetch(`http://localhost:5000/task/${taskId}`, {
+        const res = await fetch(`/task/${taskId}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,

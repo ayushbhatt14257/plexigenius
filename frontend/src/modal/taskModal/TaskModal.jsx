@@ -49,8 +49,8 @@ const TaskModal = ({
 
     const url =
       mode === "create"
-        ? "http://localhost:5000/task"
-        : `http://localhost:5000/task/${editData._id}`;
+        ? "/task"
+        : `/task/${editData._id}`;
     const method = mode === "create" ? "POST" : "PUT";
 
     try {

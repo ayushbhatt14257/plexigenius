@@ -20,10 +20,10 @@ const EmployeeDash = () => {
   const fetchData = async () => {
     try {
       const [resEmp, resTask] = await Promise.all([
-        fetch("http://localhost:5000/getEmployee", {
+        fetch("/getEmployee", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        fetch("http://localhost:5000/getTask", {
+        fetch("/getTask", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -40,8 +40,8 @@ const EmployeeDash = () => {
   const handleCreateOrUpdate = async (data) => {
     const url =
       mode === "create"
-        ? "http://localhost:5000/employee"
-        : `http://localhost:5000/employee/${editData._id}`;
+        ? "/employee"
+        : `/employee/${editData._id}`;
     const method = mode === "create" ? "POST" : "PUT";
 
     const res = await fetch(url, {
@@ -65,7 +65,7 @@ const EmployeeDash = () => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure to delete?")) return;
-    await fetch(`http://localhost:5000/employee/${id}`, {
+    await fetch(`/employee/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
