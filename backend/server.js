@@ -14,9 +14,14 @@ const taskroute = require('./routes/taskRoutes')
 
 
 app.use(express.json());
-app.use(adminroute);
-app.use(employeeroute);
-app.use(taskroute);
+// app.use(adminroute);
+// app.use(employeeroute);
+// app.use(taskroute);
+
+app.use("/api/tasks", adminroute);              // ✅ OK
+app.use("/api/employees", employeeroute);      // ✅ OK
+app.use("/api/admin", taskroute);             // ✅ OK
+
 
 const PORT = process.env.PORT || 5000;
 
