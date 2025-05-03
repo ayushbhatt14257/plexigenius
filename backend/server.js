@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const cors = require('cors')
+// const cors = require('cors')
 
 
 const path = require("path")
@@ -9,14 +9,14 @@ const path = require("path")
 
 require('./db/conn');
 
-if (process.env.NODE_ENV !== 'production') {
-    app.use(cors({
-      origin: "*",
-      methods: ["GET", "POST", "PUT", "DELETE"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true
-    }));
-  }
+// if (process.env.NODE_ENV !== 'production') {
+//     app.use(cors({
+//       origin: "*",
+//       methods: ["GET", "POST", "PUT", "DELETE"],
+//       allowedHeaders: ["Content-Type", "Authorization"],
+//       credentials: true
+//     }));
+//   }
 
 const adminroute = require('./routes/adminRoutes')
 const employeeroute = require('./routes/employessRoute')
