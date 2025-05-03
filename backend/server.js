@@ -10,7 +10,7 @@ const path = require("path")
 require('./db/conn');
 
 app.use(cors({
-    origin: "*",
+    origin: "https://plexigenius.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
