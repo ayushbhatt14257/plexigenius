@@ -10,7 +10,7 @@ const path = require("path")
 require('./db/conn');
 
 app.use(cors({
-    origin: "http://localhost:3000", // <-- this should be your React app
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
