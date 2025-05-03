@@ -1,22 +1,30 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
+const cors = require('cors')
 
-const path = require('path')
+
+const path = require("path")
 
 
 require('./db/conn');
 
+app.use(cors({
+    origin: "http://localhost:3000", // <-- this should be your React app
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 const adminroute = require('./routes/adminRoutes')
-// const employeeroute = require('./routes/employessRoute')
-// const taskroute = require('./routes/taskRoutes')
+const employeeroute = require('./routes/employessRoute')
+const taskroute = require('./routes/taskRoutes')
 
 
 
 app.use(express.json());
 app.use(adminroute);
-// app.use(employeeroute);
-// app.use(taskroute);
+app.use(employeeroute);
+app.use(taskroute);
 
 
 
