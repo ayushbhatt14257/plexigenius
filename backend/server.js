@@ -1,19 +1,22 @@
 const express = require("express");
+const app = express();
 const dotenv = require('dotenv');
-
+dotenv.config();
 const path = require('path')
 
-const app = express();
-dotenv.config();
+
 require('./db/conn');
+
+const adminroute = require('./routes/adminRoutes')
+const employeeroute = require('./routes/employessRoute')
+const taskroute = require('./routes/taskRoutes')
+
 
 
 app.use(express.json());
-
-
-app.use(require('./routes/adminRoutes'));
-app.use(require('./routes/employessRoute'));
-app.use(require('./routes/taskRoutes'));
+app.use(adminroute);
+app.use(employeeroute);
+app.use(taskroute);
 
 const PORT = process.env.PORT || 5000;
 

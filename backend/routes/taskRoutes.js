@@ -44,7 +44,7 @@ router.get('/getTask', protect, async(req, res)=> {
 
 // get single Task
 
-router.get('/task/:id', protect, async(req, res)=> {
+router.get('/task/:id/', protect, async(req, res)=> {
     try {
         
         const task = await Task.findById(req.params.id).populate('assignedTo', "name email");
@@ -61,7 +61,7 @@ router.get('/task/:id', protect, async(req, res)=> {
 
 // update task 
 
-router.put('/task/:id', protect, async(req, res)=> {
+router.put('/task/:id/', protect, async(req, res)=> {
     try {
         
         const {title, description, assignedTo, priority, deadline, status} = req.body
@@ -93,7 +93,7 @@ router.put('/task/:id', protect, async(req, res)=> {
 
 // delete task 
 
-router.delete('/task/:id', protect, async(req, res)=> {
+router.delete('/task/:id/', protect, async(req, res)=> {
     try {
         
         const deleted = await Task.findByIdAndDelete(req.params.id);

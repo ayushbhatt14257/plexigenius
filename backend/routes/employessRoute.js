@@ -34,7 +34,7 @@ router.get("/getEmployee" , protect, async(req, res) => {
 
 
 // get one employee
-router.get("/employee/:id" , protect, async(req, res) => {
+router.get("/employee/:id/" , protect, async(req, res) => {
     try {
         const employee = await Employee.findById(req.params.id);
         if (!employee) {
@@ -48,7 +48,7 @@ router.get("/employee/:id" , protect, async(req, res) => {
 
 
 // update one 
-router.put("/employee/:id" , protect, async(req, res) => {
+router.put("/employee/:id/" , protect, async(req, res) => {
     try {
         const updated = await Employee.findByIdAndUpdate(req.params.id, req.body,{new: true});
         if (!updated) {
@@ -61,7 +61,7 @@ router.put("/employee/:id" , protect, async(req, res) => {
 });
 
 //delete One
-router.delete('/employee/:id', protect, async(req, res)=> {
+router.delete('/employee/:id/', protect, async(req, res)=> {
     try {
         const deleted = await Employee.findByIdAndDelete(req.params.id);
         if (!deleted) {
